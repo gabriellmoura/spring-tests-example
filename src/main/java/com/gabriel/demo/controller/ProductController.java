@@ -66,7 +66,8 @@ public class ProductController {
 	}
 
 	@PutMapping("/product/{id}")
-	public ResponseEntity<?> updateProduct(@PathVariable Integer id,
+	public ResponseEntity<?> updateProduct(
+			@PathVariable Integer id,
 			@RequestBody ProductEntity product,
 			@RequestHeader("If-Match") Integer ifMatch) {
 		logger.info("Updating Product {} with id {}", product, id);
